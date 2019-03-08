@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>javascript - funkcje</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>javascript - funkcje | javascript - phaser</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="javascript - funkcje" />
+<meta name="author" content="szeldon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kontynuujemy podstawy javascript. Funkcje." />
+<meta property="og:description" content="Kontynuujemy podstawy javascript. Funkcje." />
+<link rel="canonical" href="http://localhost:4000/wprowadzenie_javascript-funkcje" />
+<meta property="og:url" content="http://localhost:4000/wprowadzenie_javascript-funkcje" />
+<meta property="og:site_name" content="javascript - phaser" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-08T22:45:00+01:00" />
+<script type="application/ld+json">
+{"description":"Kontynuujemy podstawy javascript. Funkcje.","@type":"BlogPosting","headline":"javascript - funkcje","url":"http://localhost:4000/wprowadzenie_javascript-funkcje","datePublished":"2019-03-08T22:45:00+01:00","dateModified":"2019-03-08T22:45:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/wprowadzenie_javascript-funkcje"},"author":{"@type":"Person","name":"szeldon"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>szeldon@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>javascript - funkcje</h2>
+  <time datetime="2019-03-08T22:45:00+01:00" class="by-line">08 Mar 2019</time>
+  <p>Kontynuujemy podstawy javascript. Funkcje.</p>
+
+<ol>
+  <li>Po pierwsze znowu potrzebujemy pliku HTML w którym będziemy wpisywać naszą treść. W stworzonym wcześniej katalogu game01 (u mnie to dokładnie e:\programowanie\kurs-javascript\game01) utwórz plik step02.html i wypełnij go poniższą treścią.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>funkcje!<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/script&gt;</span>
+	ciało HTMLa
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Uruchom program mangoose. Mam nadzieję, że skonfigurowałeś go, jak w opisałem na początku kursu i widzisz teraz w przeglądarce katalog game01. Wejdź do niego i wybierz step02.html. Widać stronę z tylko tekstem “ciało HTMLa”.</p>
+  </li>
+  <li>
+    <p>Dodajmy zatem kod javascript. Wpisujemy go, jak ostatnio, pomiędzy liniami zaczynającymi się od <script> i </script>. Utwórzmy zatem pierwszą funkcję! Co to funkcja? To taki smok. Smok się nazywa. Smok może coś zjadać i może coś wypluwać. Ale niekoniecznie musi coś zjadać albo niekoniecznie coś wypluwać. Tu napiszmy prostą funkcję, która wyświetli nam alert. Jej wywołanie to po prostu podanie jej nazwy i nawiasów. Tak, alert() to funkcja. Jest już wbudowana w javascript.</p>
+  </li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+	<span class="kd">function</span> <span class="nx">pokazCosNaEkranie</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="s2">"AAAAAAAAAAAAAAAAAAAA"</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="nx">pokazCosNaEkranie</span><span class="p">();</span>
+	<span class="nx">pokazCosNaEkranie</span><span class="p">();</span>
+	<span class="nx">pokazCosNaEkranie</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Zróbmy w takim razie też funkcję (smoka), który coś zjada. Tu funkcja pokazująca na ekranie kilka podanych zmiennych. Podane są dwie zmienne do zjedzenia. Jedna nazywa się kto, druga tekst. Ich połączenie z tekstem daje komunikat wypisywany na ekranie.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+
+	<span class="kd">function</span> <span class="nx">pokazToCosNaEkranie</span><span class="p">(</span><span class="nx">kto</span><span class="p">,</span> <span class="nx">tekst</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="nx">kto</span> <span class="o">+</span> <span class="s2">" powiedział: "</span> <span class="o">+</span> <span class="nx">tekst</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="nx">pokazToCosNaEkranie</span><span class="p">(</span><span class="s2">"zenek"</span><span class="p">,</span> <span class="s2">"bla"</span><span class="p">);</span>
+	<span class="nx">pokazToCosNaEkranie</span><span class="p">(</span><span class="s2">"ten"</span><span class="p">,</span> <span class="s2">"ojoj"</span><span class="p">);</span>
+	<span class="nx">pokazToCosNaEkranie</span><span class="p">(</span><span class="s2">"tamten"</span><span class="p">,</span> <span class="mi">123</span><span class="p">);</span>
+
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Ostatni rodzaj funkcji, to funkcja, która coś wypluwa. Robi się to poprzez użycia słowa return wewnątrz niej. Dzięki temu to, co jest podane po return, zostanie wyplute z funkcji i będzie tego można użyć w programie po wywołaniu funkcji.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+	<span class="kd">let</span> <span class="nx">zwrocone</span> <span class="o">=</span> <span class="nx">pokazIZwrocCosNaEkranie</span><span class="p">(</span><span class="s2">"zenek"</span><span class="p">,</span> <span class="s2">"bla"</span><span class="p">);</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s2">"FUNKCJA ZWRÓCIŁA: "</span><span class="o">+</span><span class="nx">zwrocone</span><span class="p">);</span>
+
+
+	<span class="kd">function</span> <span class="nx">pokazIZwrocCosNaEkranie</span><span class="p">(</span><span class="nx">kto</span><span class="p">,</span> <span class="nx">tekst</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">let</span> <span class="nx">do_wyswielenia</span> <span class="o">=</span> <span class="nx">kto</span> <span class="o">+</span> <span class="s2">" powiedział: "</span> <span class="o">+</span> <span class="nx">tekst</span><span class="p">;</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="nx">do_wyswielenia</span><span class="p">);</span>
+		<span class="k">return</span> <span class="nx">do_wyswielenia</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Zwróć uwagę w pliku game01/index00.html, że mamy tam utworzone różne funkcje. Jest zapis “function create()” i “function preload()”. Co więcej, użytych jest dużo funkcji jak setVelocity() czy setBounce(). Kolejny element index00 nam się wyjaśnił.</li>
+</ol>
+
+<p>Na dziś to tyle.</p>
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>szeldon</b>
+    </span>
+    
+    <span>© 2019</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

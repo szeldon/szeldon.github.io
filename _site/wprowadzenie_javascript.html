@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>javascript - zmienne</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>javascript - zmienne | javascript - phaser</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="javascript - zmienne" />
+<meta name="author" content="szeldon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Trochę podstaw javascript na dziś. Zmienne." />
+<meta property="og:description" content="Trochę podstaw javascript na dziś. Zmienne." />
+<link rel="canonical" href="http://localhost:4000/wprowadzenie_javascript" />
+<meta property="og:url" content="http://localhost:4000/wprowadzenie_javascript" />
+<meta property="og:site_name" content="javascript - phaser" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-08T22:20:00+01:00" />
+<script type="application/ld+json">
+{"description":"Trochę podstaw javascript na dziś. Zmienne.","@type":"BlogPosting","headline":"javascript - zmienne","url":"http://localhost:4000/wprowadzenie_javascript","datePublished":"2019-03-08T22:20:00+01:00","dateModified":"2019-03-08T22:20:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/wprowadzenie_javascript"},"author":{"@type":"Person","name":"szeldon"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>szeldon@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>javascript - zmienne</h2>
+  <time datetime="2019-03-08T22:20:00+01:00" class="by-line">08 Mar 2019</time>
+  <p>Trochę podstaw javascript na dziś. Zmienne.</p>
+
+<ol>
+  <li>Po pierwsze potrzebujemy pliku HTML w którym będziemy wpisywać naszą treść. W stworzonym wcześniej katalogu game01 (u mnie to dokładnie e:\programowanie\kurs-javascript\game01) utwórz plik step01.html i wypełnij go poniższą treścią.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>zmienne!<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/script&gt;</span>
+	ciało HTMLa
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Uruchom program mangoose. Mam nadzieję, że skonfigurowałeś go, jak w poprzednim poście i widzisz teraz w przeglądarce katalog game01. Wejdź do niego i wybierz step01.html. Widać stronę z tylko tekstem “ciało HTMLa”.</p>
+  </li>
+  <li>
+    <p>Dodajmy wreszcie jakiś kod javascript. Wpisujemy go pomiędzy liniami zaczynającymi się od <script> i </script>. Utwórzmy zatem zmienną tekstową. Zmienne tworzymy poleceniem let. Co to zmienna? Pudełko, które ma nazwę i coś w nim siedzi. Przykładem może być zmienna liczbaŻyć w grach. Potem wyświetlmy ją funkcją (możesz jeszcze nie rozumieć, ale to nieważne!) alert().</p>
+  </li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">wiadomosc</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">inna_wiadomosc</span> <span class="o">=</span> <span class="s2">"inny tekst"</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">inna_wiadomosc</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Zmienne nietekstowe tworzymy identycznie. Ba, możemy nawet łączyć ze sobą różne zmienne, jak poniżej.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">wiadomosc</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">inna_wiadomosc</span> <span class="o">=</span> <span class="s2">"inny tekst"</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">inna_wiadomosc</span><span class="p">);</span>
+
+  <span class="kd">let</span> <span class="nx">liczba</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">liczba</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">wiadomosc_i_liczba</span> <span class="o">=</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="nx">liczba</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">wiadomosc_i_liczba</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Jeszcze lepiej, zobaczcie, że do zmiennej można przypisać inną zmienną i wtedy zmienna będzie już wskazywać na to samo, co druga zmienna.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">wiadomosc</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">inna_wiadomosc</span> <span class="o">=</span> <span class="s2">"inny tekst"</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">inna_wiadomosc</span><span class="p">);</span>
+
+  <span class="kd">let</span> <span class="nx">liczba</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">liczba</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">wiadomosc_i_liczba</span> <span class="o">=</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="nx">liczba</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">wiadomosc_i_liczba</span><span class="p">);</span>
+
+  <span class="nx">inna_wiadomosc</span> <span class="o">=</span> <span class="nx">wiadomosc</span><span class="p">;</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">inna_wiadomosc</span><span class="p">);</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">wiadomosc</span> <span class="o">+</span> <span class="nx">inna_wiadomosc</span><span class="p">);</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">wiadomosc</span> <span class="o">+</span> <span class="mi">123</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Zwróć uwagę w pliku game01/index00.html, że mamy tam różne zmienne. Jest zapis “let config”, “let player”. Powoli zaczniemy rozumieć każdą linijkę.</li>
+</ol>
+
+<p>Na dziś to tyle.</p>
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>szeldon</b>
+    </span>
+    
+    <span>© 2019</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

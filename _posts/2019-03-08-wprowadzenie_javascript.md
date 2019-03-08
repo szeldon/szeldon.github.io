@@ -1,6 +1,7 @@
 ---
 title: javascript - zmienne
 published: true
+date: 2019-03-08 21:20:00
 ---
 
 Trochę podstaw javascript na dziś. Zmienne.
@@ -30,7 +31,7 @@ Trochę podstaw javascript na dziś. Zmienne.
 
 1. Dodajmy wreszcie jakiś kod javascript. Wpisujemy go pomiędzy liniami zaczynającymi się od <script> i </script>. Utwórzmy zatem zmienną tekstową. Zmienne tworzymy poleceniem let. Co to zmienna? Pudełko, które ma nazwę i coś w nim siedzi. Przykładem może być zmienna liczbaŻyć w grach. Potem wyświetlmy ją funkcją (możesz jeszcze nie rozumieć, ale to nieważne!) alert().
 
-```javascript
+```html
 <script type="text/javascript">
   alert(wiadomosc);
   let inna_wiadomosc = "inny tekst";
@@ -40,7 +41,7 @@ Trochę podstaw javascript na dziś. Zmienne.
 
 1. Zmienne nietekstowe tworzymy identycznie. Ba, możemy nawet łączyć ze sobą różne zmienne, jak poniżej.
 
-```javascript
+```html
 <script type="text/javascript">
   alert(wiadomosc);
   let inna_wiadomosc = "inny tekst";
@@ -55,7 +56,7 @@ Trochę podstaw javascript na dziś. Zmienne.
 
 1. Jeszcze lepiej, zobaczcie, że do zmiennej można przypisać inną zmienną i wtedy zmienna będzie już wskazywać na to samo, co druga zmienna.
 
-```javascript
+```html
 <script type="text/javascript">
   alert(wiadomosc);
   let inna_wiadomosc = "inny tekst";
@@ -73,5 +74,6 @@ Trochę podstaw javascript na dziś. Zmienne.
 </script>
 ```
 
+1. Zwróć uwagę w pliku game01/index00.html, że mamy tam różne zmienne. Jest zapis "let config", "let player". Powoli zaczniemy rozumieć każdą linijkę.
 
 Na dziś to tyle.
