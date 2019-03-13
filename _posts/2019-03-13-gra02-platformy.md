@@ -60,4 +60,4 @@ function create() {
  }
 ```
 
-Uuu, mamy platformy. Niezbyt one są efektowne, bo gracz na razie przez nie przelatuje.
+Uuu, mamy platformy. 
