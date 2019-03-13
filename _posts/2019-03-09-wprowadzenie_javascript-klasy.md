@@ -1,7 +1,7 @@
 ---
-title: javascript - obiekty
+title: javascript - klasy
 published: true
-date: 2019-03-09 21:45:00
+date: 2019-03-13 20:00:00
 ---
 
 Kontynuujemy podstawy javascript. Klasy.
