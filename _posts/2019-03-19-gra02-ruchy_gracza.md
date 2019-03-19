@@ -90,7 +90,31 @@ Jak? Pomoże obiekt cursors stworzony w create. Dla przycisków możemy dowiedzi
 	}
 	```
 
-1. Nieźle, nie? Poniżej pełny kod na tę chwilę.
+1. Nieźle, nie? To może jeszcze niech gracz podskoczy, jak wciśniemy przycisk w górę podczas gdy gracz stoi na czymś? No to też trzeba by użyć cursors co klatkę, czyli dodajmy do update.
+
+	```javascript
+	function update() {
+		if (cursors.left.isDown) {
+			player.setVelocityX(-100);
+		} else if (cursors.right.isDown) {
+			player.setVelocityX(100);
+		} else {
+			player.setVelocityX(0);
+		}
+
+		if (cursors.up.isDown && player.body.touching.down) {
+			player.setVelocityY(-330);
+		}
+	}
+	```
+
+1. Proponuję też zmniejszyć odbijanie się gracza od podłoża po spadnięciu na nie. W metodzie create trzeba zmienić 1,1 na 0.2.
+
+	```javascript
+      player.setBounce(0.2);
+	```
+
+1. Poniżej pełny kod na tę chwilę.
 
 	```html
 	<!DOCTYPE html>
@@ -141,7 +165,7 @@ Jak? Pomoże obiekt cursors stworzony w create. Dla przycisków możemy dowiedzi
 	      this.add.image(400, 300, 'sky');
 
 	      player = this.physics.add.image(400, 100, 'player');
-	      player.setBounce(1, 1);
+      	player.setBounce(0.2);
 	      player.setCollideWorldBounds(true);
 
 	      platforms = this.physics.add.staticGroup();
@@ -163,6 +187,10 @@ Jak? Pomoże obiekt cursors stworzony w create. Dla przycisków możemy dowiedzi
 	      } else {
 	        player.setVelocityX(0);
 	      }
+
+				if (cursors.up.isDown && player.body.touching.down) {
+					player.setVelocityY(-330);
+				}
 	    }
 	  </script>
 
