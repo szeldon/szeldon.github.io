@@ -60,9 +60,10 @@ date: 2019-03-13 21:25:00
 	}
 	```
 
-Uuu, mamy platformy. Poniżej pełny kod index00.html
+1. Uuu, mamy platformy. Poniżej pełny kod index00.html
 
-	```javascript
+
+	```html
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -72,10 +73,6 @@ Uuu, mamy platformy. Poniżej pełny kod index00.html
 	<body>
 
 	  <script>
-
-	  /**
-	  *  Dodanie zderzacza.
-	  */
 
 	    let config = {
 	      type: Phaser.AUTO,
