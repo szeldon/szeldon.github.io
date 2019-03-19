@@ -40,8 +40,8 @@ date: 2019-03-13 21:25:00
 
 1. No dobra, fajnie, ale nie ma zderzeń z tymi platformami. Czas zatem na końcu funkcji create dodać zderzacz obiektów. Tu chcemy zderzać gracza i platformy.
 
-```javascript
-function create() {
+	```javascript
+	function create() {
 
 	 this.add.image(400, 300, 'sky');
 
@@ -57,7 +57,78 @@ function create() {
 	 platforms.create(400, 568, 'platform').setScale(2).refreshBody();
 
 	 this.physics.add.collider(player, platforms);
- }
-```
+	}
+	```
 
-Uuu, mamy platformy. 
+Uuu, mamy platformy. Poniżej pełny kod index00.html
+
+	```javascript
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <script src="../phaser.js"></script>
+	</head>
+
+	<body>
+
+	  <script>
+
+	  /**
+	  *  Dodanie zderzacza.
+	  */
+
+	    let config = {
+	      type: Phaser.AUTO,
+	      width: 800,
+	      height: 600,
+	      physics: {
+	        default: 'arcade',
+	        arcade: {
+	          gravity: {
+	            y: 200
+	          }
+	        }
+	      },
+	      scene: {
+	        preload: preload,
+	        create: create
+	      }
+	    };
+
+
+	    let game = new Phaser.Game(config);
+
+	    function preload() {
+
+	      this.load.image('player', 'assets/player-simple.png');
+	      this.load.image('sky', 'assets/sky.png');
+	      this.load.image('platform', 'assets/platform.png');
+
+	    }
+
+	    function create() {
+
+	      this.add.image(400, 300, 'sky');
+
+	      let player = this.physics.add.image(400, 100, 'player');
+	      player.setVelocity(100, 200);
+	      player.setBounce(1, 1);
+	      player.setCollideWorldBounds(true);
+
+	      let platforms = this.physics.add.staticGroup();
+	      platforms.create(600, 400, 'platform');
+	      platforms.create(50, 250, 'platform');
+	      platforms.create(750, 220, 'platform');
+	      platforms.create(400, 568, 'platform').setScale(2).refreshBody();
+
+	      this.physics.add.collider(player, platforms);
+
+
+	    }
+	  </script>
+
+	</body>
+
+	</html>
+
+	```
